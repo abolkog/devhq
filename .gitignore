@@ -1,5 +1,20 @@
+# dependencies
+/node_modules
+
+# build
+build
 out
 dist
-node_modules
+
+# testing
+/coverage
 .vscode-test/
+
+
+# misc
 *.vsix
+.DS_Store
+.cspell.json
+npm-debug.log*
+
+
