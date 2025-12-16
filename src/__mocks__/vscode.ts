@@ -39,8 +39,13 @@ export class Range {
   }
 }
 
+export const TreeItemCheckboxState = {
+  Unchecked: false,
+  Checked: true,
+};
+
 export const Uri = {
-  file: (fsPath: string) => ({ fsPath }),
+  file: (fsPath: string): { fsPath: string } => ({ fsPath }),
 };
 
 class Emitter<T> {
@@ -60,6 +65,7 @@ export const window = {
   showInformationMessage: jest.fn(),
   createTreeView: jest.fn(() => ({
     onDidChangeVisibility: jest.fn(),
+    onDidChangeCheckboxState: jest.fn(),
     dispose: jest.fn(),
   })),
   showTextDocument: jest.fn(),
@@ -95,6 +101,11 @@ export const env = { uriScheme: 'file' };
 
 export const ViewColumn = { One: 1 };
 
+export const createMockExtensionContext = (storagePath: string = '/tmp/vscode-storage'): any => ({
+  globalStorageUri: Uri.file(storagePath),
+  subscriptions: [],
+});
+
 export default {
   window,
   workspace,
@@ -102,9 +113,11 @@ export default {
   extensions,
   TreeItem,
   TreeItemCollapsibleState,
+  TreeItemCheckboxState,
   ThemeIcon,
   EventEmitter,
   MarkdownString,
   Range,
   Uri,
+  createMockExtensionContext,
 };

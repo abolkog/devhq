@@ -26,9 +26,14 @@ export async function handleDeleteNoteCommand(provider: NotesProvider, item: Not
     if (!filePath) {
       return;
     }
-    const message = `Delete note "${item.label}"?`;
-    const pick = await vscode.window.showWarningMessage(message, { modal: true }, 'Delete');
-    if (pick !== 'Delete') {
+
+    const confirm = await vscode.window.showWarningMessage(
+      `Are you sure you want to delete "${item.label}"?`,
+      'Delete',
+      'Cancel',
+    );
+
+    if (confirm !== 'Delete') {
       return;
     }
 

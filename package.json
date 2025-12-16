@@ -39,6 +39,24 @@
         "title": "Delete Note",
         "category": "devBoard",
         "icon": "$(trash)"
+      },
+      {
+        "command": "devboard.tasks.refresh",
+        "title": "Refresh Tasks",
+        "category": "devBoard",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "devboard.tasks.add",
+        "title": "New Task",
+        "category": "devBoard",
+        "icon": "$(plus)"
+      },
+      {
+        "command": "devboard.tasks.delete",
+        "title": "Delete Task",
+        "category": "devBoard",
+        "icon": "$(trash)"
       }
     ],
     "viewsContainers": {
@@ -82,12 +100,32 @@
           "command": "devboard.notes.add",
           "when": "view == notesView",
           "group": "navigation@1"
+        },
+        {
+          "command": "devboard.tasks.refresh",
+          "when": "view == tasksView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "devboard.tasks.add",
+          "when": "view == tasksView",
+          "group": "navigation@1"
         }
       ],
       "view/item/context": [
         {
           "command": "devboard.notes.delete",
           "when": "view == notesView && viewItem == devboard.note",
+          "group": "inline"
+        },
+        {
+          "command": "devboard.tasks.add",
+          "when": "view == tasksView && viewItem == devboard.task",
+          "group": "inline"
+        },
+        {
+          "command": "devboard.tasks.delete",
+          "when": "view == tasksView && viewItem == devboard.task",
           "group": "inline"
         }
       ]

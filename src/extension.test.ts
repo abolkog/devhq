@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import * as myExtension from './extension';
 import { VIEW_IDS } from './constants';
+import { createMockExtensionContext } from './__mocks__/vscode';
 
 describe('Extension', () => {
   it('exports activate/deactivate', () => {
@@ -9,7 +10,7 @@ describe('Extension', () => {
   });
 
   it('registers todo view on activate', async () => {
-    await myExtension.activate({ subscriptions: [] } as any);
+    await myExtension.activate(createMockExtensionContext() as any);
     expect(vscode.window.createTreeView).toHaveBeenCalledWith(
       VIEW_IDS.TODO,
       expect.objectContaining({ treeDataProvider: expect.anything() }),
@@ -17,9 +18,17 @@ describe('Extension', () => {
   });
 
   it('registers notes view on activate', async () => {
-    await myExtension.activate({ subscriptions: [] } as any);
+    await myExtension.activate(createMockExtensionContext() as any);
     expect(vscode.window.createTreeView).toHaveBeenCalledWith(
       VIEW_IDS.NOTES,
+      expect.objectContaining({ treeDataProvider: expect.anything() }),
+    );
+  });
+
+  it('registers tasks view on activate', async () => {
+    await myExtension.activate(createMockExtensionContext() as any);
+    expect(vscode.window.createTreeView).toHaveBeenCalledWith(
+      VIEW_IDS.TASKS,
       expect.objectContaining({ treeDataProvider: expect.anything() }),
     );
   });
