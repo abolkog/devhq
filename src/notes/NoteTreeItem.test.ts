@@ -14,7 +14,7 @@ describe('NoteTreeItem', () => {
 
   it('sets contextValue', () => {
     const item = new NoteTreeItem(base);
-    expect(item.contextValue).toBe('devboard.note');
+    expect(item.contextValue).toBe('devhq.note');
   });
 
   it('uses file icon for the note', () => {

@@ -1,11 +1,11 @@
-# DevBoard
+# DevHQ
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/abolkog/devboard)
-![](https://img.shields.io/github/license/abolkog/devboard.svg)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/abolkog/devhq)
+![](https://img.shields.io/github/license/abolkog/devhq.svg)
 
 A developer-focused VS Code extension that brings together **tasks**, **notes**, and a **TODO/FIXME code tree** — all in one clean workspace panel.
 
-DevBoard helps you stay organized without leaving your editor.
+DevHQ helps you stay organized without leaving your editor.
 
 ---
 
@@ -55,12 +55,12 @@ Press **F5** to launch the VS Code Extension Host.
 
 ## 🧩 Commands
 
-| Command                       | Description                       |
-| ----------------------------- | --------------------------------- |
-| **DevBoard: Open Panel**      | Opens the main DevBoard panel     |
-| **DevBoard: Rescan TODOs**    | Forces a re-scan of the workspace |
-| **DevBoard: Clear Checklist** | Clears all tasks                  |
-| **DevBoard: Clear Notes**     | Clears all notes                  |
+| Command | Description |
+| ------- | ----------- |
+
+| **DevHQ: Rescan TODOs** | Forces a re-scan of the workspace |
+| **DevHQ: Clear Checklist** | Clears all tasks |
+| **DevHQ: Clear Notes** | Clears all notes |
 
 ---
 
@@ -69,7 +69,7 @@ Press **F5** to launch the VS Code Extension Host.
 You can add user preferences like:
 
 ```
-"devboard.scanPattern": ["TODO", "FIXME"],
+"devhq.scanPattern": ["TODO", "FIXME"],
 ```
 
 ---

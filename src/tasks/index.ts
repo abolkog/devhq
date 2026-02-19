@@ -26,15 +26,15 @@ export function registerTasksView(context: vscode.ExtensionContext) {
       }
     }),
 
-    vscode.commands.registerCommand('devboard.tasks.refresh', async () => {
+    vscode.commands.registerCommand('devhq.tasks.refresh', async () => {
       await provider.refresh(true);
     }),
 
-    vscode.commands.registerCommand('devboard.tasks.add', async (item?: TaskTreeItem) => {
+    vscode.commands.registerCommand('devhq.tasks.add', async (item?: TaskTreeItem) => {
       await provider.addTask(item);
     }),
 
-    vscode.commands.registerCommand('devboard.tasks.delete', async (item: TaskTreeItem) => {
+    vscode.commands.registerCommand('devhq.tasks.delete', async (item: TaskTreeItem) => {
       await provider.deleteTask(item);
     }),
   );

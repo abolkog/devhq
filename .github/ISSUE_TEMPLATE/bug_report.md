@@ -8,7 +8,7 @@ A clear description...
 
 **Steps to reproduce**
 
-1. Open DevBoard panel
+1. Open DevHQ panel
 2. ...
 
 **Expected behavior**

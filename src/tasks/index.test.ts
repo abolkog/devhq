@@ -15,24 +15,24 @@ describe('registerTasksView', () => {
     expect(vscode.window.createTreeView).toHaveBeenCalledWith('tasksView', expect.anything());
   });
 
-  it('registers devboard.tasks.refresh command', () => {
+  it('registers devhq.tasks.refresh command', () => {
     const mockContext = createMockExtensionContext();
 
     registerTasksView(mockContext);
-    expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devboard.tasks.refresh', expect.any(Function));
+    expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devhq.tasks.refresh', expect.any(Function));
   });
 
-  it('registers devboard.tasks.add command', () => {
+  it('registers devhq.tasks.add command', () => {
     const mockContext = createMockExtensionContext();
 
     registerTasksView(mockContext);
-    expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devboard.tasks.add', expect.any(Function));
+    expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devhq.tasks.add', expect.any(Function));
   });
 
-  it('registers devboard.tasks.delete command', () => {
+  it('registers devhq.tasks.delete command', () => {
     const mockContext = createMockExtensionContext();
 
     registerTasksView(mockContext);
-    expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devboard.tasks.delete', expect.any(Function));
+    expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devhq.tasks.delete', expect.any(Function));
   });
 });

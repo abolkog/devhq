@@ -17,7 +17,7 @@ export class NotesManager {
 
   private constructor() {
     const homeDir = require('os').homedir();
-    this.notesDir = path.join(homeDir, 'Documents', 'DevBoard-Notes');
+    this.notesDir = path.join(homeDir, 'Documents', 'DevHQ-Notes');
     this.ensureNotesDir();
   }
 

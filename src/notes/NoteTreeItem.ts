@@ -6,7 +6,7 @@ export class NoteTreeItem extends vscode.TreeItem {
 
     this.label = note.name;
     this.iconPath = vscode.ThemeIcon.File;
-    this.contextValue = 'devboard.note';
+    this.contextValue = 'devhq.note';
 
     this.command = {
       command: 'vscode.open',

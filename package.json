@@ -1,6 +1,6 @@
 {
-  "name": "devboard",
-  "displayName": "DevBoard",
+  "name": "devhq",
+  "displayName": "DevHQ",
   "description": "A developer-focused VS Code extension that brings together tasks, notes, and a TODO code tree all in one clean workspace panel",
   "version": "1.0.2",
   "publisher": "abolkog",
@@ -17,59 +17,59 @@
   "contributes": {
     "commands": [
       {
-        "command": "devboard.todo.refresh",
+        "command": "devhq.todo.refresh",
         "title": "Refresh Todos",
-        "category": "devBoard",
+        "category": "devHQ",
         "icon": "$(refresh)"
       },
       {
-        "command": "devboard.notes.refresh",
+        "command": "devhq.notes.refresh",
         "title": "Refresh Notes",
-        "category": "devBoard",
+        "category": "devHQ",
         "icon": "$(refresh)"
       },
       {
-        "command": "devboard.notes.add",
+        "command": "devhq.notes.add",
         "title": "New Note",
-        "category": "devBoard",
+        "category": "devHQ",
         "icon": "$(plus)"
       },
       {
-        "command": "devboard.notes.delete",
+        "command": "devhq.notes.delete",
         "title": "Delete Note",
-        "category": "devBoard",
+        "category": "devHQ",
         "icon": "$(trash)"
       },
       {
-        "command": "devboard.tasks.refresh",
+        "command": "devhq.tasks.refresh",
         "title": "Refresh Tasks",
-        "category": "devBoard",
+        "category": "devHQ",
         "icon": "$(refresh)"
       },
       {
-        "command": "devboard.tasks.add",
+        "command": "devhq.tasks.add",
         "title": "New Task",
-        "category": "devBoard",
+        "category": "devHQ",
         "icon": "$(plus)"
       },
       {
-        "command": "devboard.tasks.delete",
+        "command": "devhq.tasks.delete",
         "title": "Delete Task",
-        "category": "devBoard",
+        "category": "devHQ",
         "icon": "$(trash)"
       }
     ],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "devBoard",
-          "title": "Dev Board",
-          "icon": "media/devboard.svg"
+          "id": "devHQ",
+          "title": "DevHQ",
+          "icon": "media/devhq.svg"
         }
       ]
     },
     "views": {
-      "devBoard": [
+      "devHQ": [
         {
           "id": "todoView",
           "name": "Todo"
@@ -87,45 +87,45 @@
     "menus": {
       "view/title": [
         {
-          "command": "devboard.todo.refresh",
+          "command": "devhq.todo.refresh",
           "when": "view == todoView",
           "group": "navigation@1"
         },
         {
-          "command": "devboard.notes.refresh",
+          "command": "devhq.notes.refresh",
           "when": "view == notesView",
           "group": "navigation@1"
         },
         {
-          "command": "devboard.notes.add",
+          "command": "devhq.notes.add",
           "when": "view == notesView",
           "group": "navigation@1"
         },
         {
-          "command": "devboard.tasks.refresh",
+          "command": "devhq.tasks.refresh",
           "when": "view == tasksView",
           "group": "navigation@1"
         },
         {
-          "command": "devboard.tasks.add",
+          "command": "devhq.tasks.add",
           "when": "view == tasksView",
           "group": "navigation@1"
         }
       ],
       "view/item/context": [
         {
-          "command": "devboard.notes.delete",
-          "when": "view == notesView && viewItem == devboard.note",
+          "command": "devhq.notes.delete",
+          "when": "view == notesView && viewItem == devhq.note",
           "group": "inline"
         },
         {
-          "command": "devboard.tasks.add",
-          "when": "view == tasksView && viewItem == devboard.task",
+          "command": "devhq.tasks.add",
+          "when": "view == tasksView && viewItem == devhq.task",
           "group": "inline"
         },
         {
-          "command": "devboard.tasks.delete",
-          "when": "view == tasksView && viewItem == devboard.task",
+          "command": "devhq.tasks.delete",
+          "when": "view == tasksView && viewItem == devhq.task",
           "group": "inline"
         }
       ]
@@ -166,7 +166,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/abolkog/devboard.git",
+    "url": "https://github.com/abolkog/devhq.git",
     "license": "MIT"
   },
   "keywords": [

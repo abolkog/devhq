@@ -17,13 +17,13 @@ export function registerNotesView(context: vscode.ExtensionContext) {
         await provider.refresh(true);
       }
     }),
-    vscode.commands.registerCommand('devboard.notes.refresh', async () => {
+    vscode.commands.registerCommand('devhq.notes.refresh', async () => {
       await provider.refresh(true);
     }),
-    vscode.commands.registerCommand('devboard.notes.add', async () => {
+    vscode.commands.registerCommand('devhq.notes.add', async () => {
       await provider.createNewNote();
     }),
-    vscode.commands.registerCommand('devboard.notes.delete', async (item: NoteTreeItem) => {
+    vscode.commands.registerCommand('devhq.notes.delete', async (item: NoteTreeItem) => {
       await provider.deleteNote(item);
     }),
   );

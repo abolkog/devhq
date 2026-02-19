@@ -32,15 +32,15 @@ describe('registerNotesView', () => {
       expect(mockContext.subscriptions?.length).toBeGreaterThan(0);
     });
 
-    it('registers devboard.notes.refresh command', () => {
+    it('registers devhq.notes.refresh command', () => {
       registerNotesView(createMockExtensionContext());
-      expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devboard.notes.refresh', expect.any(Function));
+      expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devhq.notes.refresh', expect.any(Function));
     });
 
-    it('registers devboard.notes.add command', () => {
+    it('registers devhq.notes.add command', () => {
       registerNotesView(createMockExtensionContext());
 
-      expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devboard.notes.add', expect.any(Function));
+      expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devhq.notes.add', expect.any(Function));
     });
   });
 
@@ -50,7 +50,7 @@ describe('registerNotesView', () => {
       registerNotesView(mockContext);
 
       const refreshCommandCall = (vscode.commands.registerCommand as jest.Mock).mock.calls.find(
-        call => call[0] === 'devboard.notes.refresh',
+        call => call[0] === 'devhq.notes.refresh',
       );
       expect(refreshCommandCall).toBeDefined();
 
@@ -66,7 +66,7 @@ describe('registerNotesView', () => {
       registerNotesView(mockContext);
 
       const addCommandCall = (vscode.commands.registerCommand as jest.Mock).mock.calls.find(
-        call => call[0] === 'devboard.notes.add',
+        call => call[0] === 'devhq.notes.add',
       );
       expect(addCommandCall).toBeDefined();
 
@@ -82,7 +82,7 @@ describe('registerNotesView', () => {
       registerNotesView(mockContext);
 
       const deleteCommandCall = (vscode.commands.registerCommand as jest.Mock).mock.calls.find(
-        call => call[0] === 'devboard.notes.delete',
+        call => call[0] === 'devhq.notes.delete',
       );
       expect(deleteCommandCall).toBeDefined();
 

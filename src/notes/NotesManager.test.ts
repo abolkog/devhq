@@ -8,7 +8,7 @@ jest.mock('path');
 jest.mock('os');
 
 const mockHomeDir = '/mock/home';
-const mockNotesDir = '/mock/home/Documents/DevBoard-Notes';
+const mockNotesDir = '/mock/home/Documents/DevHQ-Notes';
 
 describe('NotesManager', () => {
   let notesManager: NotesManager;

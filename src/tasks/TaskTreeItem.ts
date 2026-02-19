@@ -23,7 +23,7 @@ export class TaskTreeItem extends vscode.TreeItem {
       this.description = `${completed}/${task.subtasks.length}`;
     }
 
-    this.contextValue = 'devboard.task';
+    this.contextValue = 'devhq.task';
     this.tooltip = `${task.title}\nCreated: ${new Date(task.createdAt).toLocaleString()}`;
   }
 }

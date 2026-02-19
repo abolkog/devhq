@@ -17,7 +17,7 @@ export function registerTodoView(context: vscode.ExtensionContext) {
       }
     }),
 
-    vscode.commands.registerCommand('devboard.todo.refresh', async () => {
+    vscode.commands.registerCommand('devhq.todo.refresh', async () => {
       await provider.refresh(true);
     }),
   );
