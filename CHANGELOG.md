@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/abolkog/devboard/compare/v1.0.1...v1.0.2) (2026-02-19)
+
+
+### Bug Fixes
+
+* **CICD:** add missing semantic release exec ([64076ce](https://github.com/abolkog/devboard/commit/64076ce63058ff3d8dd43be1ab5cd31504fe7194))
+
 ## [1.0.1](https://github.com/abolkog/devboard/compare/v1.0.0...v1.0.1) (2026-02-18)
 
 
