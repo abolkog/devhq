@@ -54,7 +54,7 @@ export class TaskTreeProvider implements vscode.TreeDataProvider<TaskTreeItem> {
   }
 
   async addTask(item?: TaskTreeItem): Promise<void> {
-    const parentId = item?.task.id;
+    const parentId = item?.task?.id;
     const promptMessage = parentId ? `Add subtask to "${item?.task.title}"` : 'Enter task name';
 
     const taskName = await vscode.window.showInputBox({

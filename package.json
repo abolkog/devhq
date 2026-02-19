@@ -53,6 +53,12 @@
         "icon": "$(plus)"
       },
       {
+        "command": "devhq.tasks.addSubtask",
+        "title": "Add Subtask",
+        "category": "devHQ",
+        "icon": "$(plus)"
+      },
+      {
         "command": "devhq.tasks.delete",
         "title": "Delete Task",
         "category": "devHQ",
@@ -119,7 +125,7 @@
           "group": "inline"
         },
         {
-          "command": "devhq.tasks.add",
+          "command": "devhq.tasks.addSubtask",
           "when": "view == tasksView && viewItem == devhq.task",
           "group": "inline"
         },

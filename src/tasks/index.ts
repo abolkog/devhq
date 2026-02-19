@@ -30,7 +30,11 @@ export function registerTasksView(context: vscode.ExtensionContext) {
       await provider.refresh(true);
     }),
 
-    vscode.commands.registerCommand('devhq.tasks.add', async (item?: TaskTreeItem) => {
+    vscode.commands.registerCommand('devhq.tasks.add', async () => {
+      await provider.addTask(undefined);
+    }),
+
+    vscode.commands.registerCommand('devhq.tasks.addSubtask', async (item: TaskTreeItem) => {
       await provider.addTask(item);
     }),
 
