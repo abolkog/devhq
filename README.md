@@ -7,6 +7,8 @@ A developer-focused VS Code extension that brings together **tasks**, **notes**,
 
 DevHQ helps you stay organized without leaving your editor.
 
+<img src="./media/devhq-panels.png" width="800">
+
 ---
 
 ## ✨ Features
@@ -15,7 +17,7 @@ DevHQ helps you stay organized without leaving your editor.
 
 A single panel that contains three tabs:
 
-#### ✔️ **1. Checklist (Todos)**
+#### ✔️ **1. Checklist (Tasks)**
 
 - Add / remove / check off tasks
 - Persistent storage across sessions
@@ -24,7 +26,6 @@ A single panel that contains three tabs:
 #### 📝 **2. Notes**
 
 - Quick notes area for ideas, snippets, reminders
-- Auto-save
 - Markdown-friendly text area (optional future mode)
 
 #### 🌲 **3. TODO/FIXME Tree**
@@ -32,7 +33,7 @@ A single panel that contains three tabs:
 - Automatically scans your project for:
   - `TODO`
   - `FIXME`
-- Organized by file
+- Organised by file
 - Click to jump directly to source
 
 ---
@@ -55,22 +56,16 @@ Press **F5** to launch the VS Code Extension Host.
 
 ## 🧩 Commands
 
-| Command | Description |
-| ------- | ----------- |
-
-| **DevHQ: Rescan TODOs** | Forces a re-scan of the workspace |
-| **DevHQ: Clear Checklist** | Clears all tasks |
-| **DevHQ: Clear Notes** | Clears all notes |
+| Command                  | Description                       |
+| ------------------------ | --------------------------------- |
+| **DevHQ: Refresh Task**  | Refresh tasks list                |
+| **DevHQ: Refresh Notes** | Refresh notes list                |
+| **DevHQ: Refresh Todos** | Rescan code and refresh todo list |
+| **DevHQ: New Task**      | Create new task                   |
+| **DevHQ: New Note**      | Create new note                   |
+| **DevHQ: Clear Notes**   | Clears all notes                  |
 
 ---
-
-## 🔧 Settings (Optional)
-
-You can add user preferences like:
-
-```
-"devhq.scanPattern": ["TODO", "FIXME"],
-```
 
 ---
 
