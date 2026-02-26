@@ -9,6 +9,7 @@ const mockTaskManager = {
   addTask: jest.fn(),
   deleteTask: jest.fn(),
   toggleTask: jest.fn(),
+  clearCompletedTasks: jest.fn(),
 };
 
 const mockTasks = [
@@ -122,6 +123,14 @@ describe('TaskProvider', () => {
       await provider.toggleTask('task-id');
 
       expect(mockTaskManager.toggleTask).toHaveBeenCalledWith('task-id');
+    });
+  });
+
+  describe('clearCompletedTasks', () => {
+    it('should clear completed tasks and refresh', async () => {
+      await provider.clearCompletedTasks();
+
+      expect(mockTaskManager.clearCompletedTasks).toHaveBeenCalled();
     });
   });
 

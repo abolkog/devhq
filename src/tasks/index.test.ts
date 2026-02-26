@@ -35,4 +35,11 @@ describe('registerTasksView', () => {
     registerTasksView(mockContext);
     expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devhq.tasks.delete', expect.any(Function));
   });
+
+  it('registers devhq.tasks.clearCompleted command', () => {
+    const mockContext = createMockExtensionContext();
+
+    registerTasksView(mockContext);
+    expect(vscode.commands.registerCommand).toHaveBeenCalledWith('devhq.tasks.clearCompleted', expect.any(Function));
+  });
 });

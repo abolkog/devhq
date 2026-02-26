@@ -41,5 +41,9 @@ export function registerTasksView(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand('devhq.tasks.delete', async (item: TaskTreeItem) => {
       await provider.deleteTask(item);
     }),
+
+    vscode.commands.registerCommand('devhq.tasks.clearCompleted', async () => {
+      await provider.clearCompletedTasks();
+    }),
   );
 }

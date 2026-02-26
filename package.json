@@ -36,6 +36,18 @@
         "icon": "$(plus)"
       },
       {
+        "command": "devhq.notes.openFolder",
+        "title": "Open Notes Folder",
+        "category": "devHQ",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "devhq.notes.rename",
+        "title": "Rename Note",
+        "category": "devHQ",
+        "icon": "$(edit)"
+      },
+      {
         "command": "devhq.notes.delete",
         "title": "Delete Note",
         "category": "devHQ",
@@ -64,6 +76,12 @@
         "title": "Delete Task",
         "category": "devHQ",
         "icon": "$(trash)"
+      },
+      {
+        "command": "devhq.tasks.clearCompleted",
+        "title": "Clear Completed Tasks",
+        "category": "devHQ",
+        "icon": "$(clear-all)"
       }
     ],
     "viewsContainers": {
@@ -122,6 +140,11 @@
           "command": "devhq.tasks.add",
           "when": "view == tasksView",
           "group": "navigation@1"
+        },
+        {
+          "command": "devhq.tasks.clearCompleted",
+          "when": "view == tasksView",
+          "group": "navigation@2"
         }
       ],
       "view/item/context": [

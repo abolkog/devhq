@@ -96,4 +96,9 @@ export class TaskTreeProvider implements vscode.TreeDataProvider<TaskTreeItem> {
     await this.taskManager.toggleTask(id);
     await this.refresh(true);
   }
+
+  async clearCompletedTasks(): Promise<void> {
+    await this.taskManager.clearCompletedTasks();
+    await this.refresh(true);
+  }
 }

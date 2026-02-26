@@ -100,4 +100,19 @@ export class TaskManager {
       await this.saveTasks(tasks);
     }
   }
+
+  async clearCompletedTasks(): Promise<void> {
+    const tasks = await this.getTasks();
+    const activeTasks = this.removeCompletedTasks(tasks);
+    await this.saveTasks(activeTasks);
+  }
+
+  private removeCompletedTasks(tasks: Task[]): Task[] {
+    return tasks
+      .filter(task => !task.completed)
+      .map(task => ({
+        ...task,
+        subtasks: task.subtasks ? this.removeCompletedTasks(task.subtasks) : [],
+      }));
+  }
 }
